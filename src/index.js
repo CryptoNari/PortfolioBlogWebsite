@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import './style.scss';
-import printMe from './print.js';
+import './styles/main.scss';
+import printMe from './js/print.js';
 
 //import './logoipsum-logo-50.svg';
 
