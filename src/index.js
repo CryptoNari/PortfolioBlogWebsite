@@ -1,30 +1,14 @@
 import _ from 'lodash';
+
+/* Import .scss styles */
+
 import './styles/main.scss';
-import printMe from './js/print.js';
-
-//import './logoipsum-logo-50.svg';
-
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
 
 
+/* Import .js files */
 
-    // Add the image to our existing div.
-    /* const myIcon = new Image();
-    myIcon.src = Icon;
+import './js/images.js';
+import {pageControls} from './js/controls';
 
-    element.appendChild(myIcon); */
 
-    element.appendChild(btn);
-
-    return element;
-}
-
-document.body.appendChild(component());
+pageControls();
