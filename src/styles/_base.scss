@@ -10,38 +10,72 @@
   list-style: none;
 }
 
+// variables
+:root{
+  --color-primary: #4d4d4d;
+  --color-secondary: #ffffff;
+  --color-orange: #f7931a;
+  --color-blue:	#0d579b;
+  --color-green: #329239;
+  --color-light: #7b7b7b;
+  --color-shadow: #1f1f1f;
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey1: #dbe1e8;
+  --color-grey2: #b2becd;
+  --color-grey4: #6c7983;
+  --color-grey5: #2a2e35;
+  --color-grey6: #12181b; 
+}
 
 
-$body-color: rgb(0, 0, 0);
 
 body {
-  background-color: $body-color;
+  background-color: var(--color-primary);
   color: white;
 }
 
+.light-mode{
+  --color-primary: #e2e1e1;
+  --color-secondary: #4d4d4d;
+  --color-orange: #000;
+  --color-blue:	#0d579b;
+  --color-green: #329239;
+  --color-light: #f7931a;
+  --color-shadow: #5a5a5a;
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey1: #dbe1e8;
+  --color-grey2: #b2becd;
+  --color-grey4: #6c7983;
+  --color-grey5: #2a2e35;
+  --color-grey6: #12181b; 
+}
 .section-1{
   display: none;
-  background-color: aqua;
+  //background-color: aqua;
 }
 
 .section-2{
   display: none;
-  background-color: rgb(60, 255, 0);
+  //background-color: rgb(60, 255, 0);
 }
 
 .section-3{
   display: none;
-  background-color: rgb(43, 0, 255);
+  //background-color: rgb(43, 0, 255);
 }
 
 .section-4{
   display: none;
-  background-color: rgb(38, 0, 255);
+  //background-color: rgb(38, 0, 255);
 }
 
 .section-5{
   display: none;
-  background-color: rgb(255, 47, 0);
+  //background-color: rgb(255, 47, 0);
 }
 
 .active-section{

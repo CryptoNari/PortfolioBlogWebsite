@@ -5,18 +5,51 @@
 .control-btn{
     padding: 1rem;
       cursor: pointer;
-      background-color:brown;
       width: 55px;
       height: 55px;
-      border-radius: 50%;
+      border-radius: 18px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: .7rem 0;
-      box-shadow: var(--box-shadow-1);
+      background: var(--color-primary);
+      box-shadow:  -8px 8px 7px var(--color-shadow), 8px -8px 7px var(--color-light);
       i{
         font-size: 1.2rem;
-        color: var(--color-white);
+        color: var(--color-orange);
         pointer-events: none;
       }
+}
+.active-control{
+  box-shadow: inset -8px 8px 7px var(--color-shadow), inset 8px -8px 7px var(--color-light);
+  transition: var(--stand-trans);
+  i{
+    color: var(--color-orange);
+  }
+}
+
+.btn-toggle-theme{
+  top: 5%;
+  right: 3%;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: var(--color-primary);
+  box-shadow:  -8px 8px 7px var(--color-shadow),
+             8px -8px 7px var(--color-light);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: var(--stand-trans);
+  &:active{
+    transform: translateY(-3px);
+  }
+  i{
+    font-size: 1.4rem;
+    color: var(--color-orange);
+    pointer-events: none;
+  }
 }

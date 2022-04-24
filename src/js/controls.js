@@ -14,14 +14,14 @@ const pageControls = () => {
         })
     }
 
-   /*  // Toggle Dark/light Theme
+    // Toggle Dark/light Theme
     const themeBtn = document.querySelector('.btn-toggle-theme');
 
     themeBtn.addEventListener('click', () => {
         let element = document.body;
         element.classList.toggle('light-mode')
     })
- */
+
 }
 
 
