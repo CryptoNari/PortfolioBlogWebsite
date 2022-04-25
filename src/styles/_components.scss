@@ -7,15 +7,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem .7rem;
+  margin: .7rem;
   padding: 1rem;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   @include control-btn-style();
   cursor: pointer;
 
   i{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--color-orange);
     pointer-events: none;
   }
@@ -44,8 +44,8 @@
   align-items: center;
   top: 2%;
   right: 3%;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   @include control-btn-style();
   cursor: pointer;
   transition: var(--stand-trans);
@@ -53,10 +53,40 @@
   &:active{
     transform: translateY(-3px);
   }
-  
+
   i{
-    font-size: 1.4rem;
-    color: var(--color-orange);
+    font-size: 1.2rem;
+    color: var(--color-secondary);
     pointer-events: none;
+  }
+}
+
+
+// main title
+.section-title{
+  text-align: center;
+  margin: 3rem 4rem;
+  
+  h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+   
+    span{
+      color: var(--color-orange);
+    }
+    .bg-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: var(--color-grey5);
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 3.8rem;
+      opacity: 75%;
+      transition: var(--std-trans);
+      transform: translate(-50%, -50%);
+    }
   }
 }

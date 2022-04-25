@@ -26,7 +26,9 @@
   --color-grey2: #b2becd;
   --color-grey4: #6c7983;
   --color-grey5: #2a2e35;
-  --color-grey6: #12181b; 
+  --color-grey6: #12181b;
+
+  --std-trans: all .4s ease-in-out;
 }
 
 .light-mode{
@@ -76,4 +78,6 @@
 body {
   background-color: var(--color-primary);
   color: var(--color-secondary);
+  transition: var(--stand-trans);
+  font-size: 1.1rem;
 }

@@ -10,10 +10,20 @@ section{
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    background-color: var(--color-primary);
 }
 .active-section{
     display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+      0%{
+        transform: translateY(-100%) scaleY(0);
+      }
+
+      100%{
+        transform: translateY(0) scaleY(1);
+      }
+    }
   }
   
 
@@ -25,7 +35,6 @@ section{
     align-items: center;
     justify-content:space-evenly;
     z-index: 10;
-    margin-bottom: .5rem;
     padding: .5rem;
     top: auto;   
     bottom: 0.5%;
@@ -40,7 +49,6 @@ section{
         right: 3%;
         left: auto;
         width: auto;
-        margin-bottom: auto;
         box-shadow: 0;
         transform: translateY(-50%);
     }
