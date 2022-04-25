@@ -2,51 +2,58 @@
 
 /* Components: contains anything reusable such as buttons, navbars, cards etc. */
 
+// Page control/toggle buttons
 .control-btn{
-    padding: 1rem;
-      cursor: pointer;
-      width: 55px;
-      height: 55px;
-      border-radius: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: .7rem 0;
-      background: var(--color-primary);
-      box-shadow:  -8px 8px 7px var(--color-shadow), 8px -8px 7px var(--color-light);
-      i{
-        font-size: 1.2rem;
-        color: var(--color-orange);
-        pointer-events: none;
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem .7rem;
+  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  @include control-btn-style();
+  cursor: pointer;
+
+  i{
+    font-size: 1.4rem;
+    color: var(--color-orange);
+    pointer-events: none;
+  }
+
+  @include control-side() {
+    margin: .7rem 0;
+  }
 }
+
 .active-control{
-  box-shadow: inset -8px 8px 7px var(--color-shadow), inset 8px -8px 7px var(--color-light);
+  box-shadow: inset 4px 8px 8px var(--color-shadow),
+              inset -4px -8px 8px var(--color-light);
   transition: var(--stand-trans);
+
   i{
     color: var(--color-orange);
   }
 }
 
+
+// Dark/Light Mode toggle button
 .btn-toggle-theme{
-  top: 5%;
-  right: 3%;
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  background: var(--color-primary);
-  box-shadow:  -8px 8px 7px var(--color-shadow),
-             8px -8px 7px var(--color-light);
-  cursor: pointer;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  top: 2%;
+  right: 3%;
+  width: 60px;
+  height: 60px;
+  @include control-btn-style();
+  cursor: pointer;
   transition: var(--stand-trans);
+  
   &:active{
     transform: translateY(-3px);
   }
+  
   i{
     font-size: 1.4rem;
     color: var(--color-orange);

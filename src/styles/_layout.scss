@@ -1,24 +1,47 @@
 // File: _layout.scss
 
 /* Layout: contains all the CSS that handles the layout, such as the container and any grid systems. */
+
+// sections 
 section{
-    min-height: 100vh;
+    display: none;
+    min-height: 90vh;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
     padding: 3rem 18rem;
 }
+.active-section{
+    display: block;
+  }
   
 
+ // control buttons container 
 .page-controls{
     position: fixed;
-    z-index: 10;
-    top: 50%;
-    right: 3%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
+    justify-content:space-evenly;
+    z-index: 10;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    top: auto;   
+    bottom: 0.5%;
+    left: 50%;
+    height: 10vh;
+    width: 100%;
+    transform: translateX(-50%);
+    @include control-side() {
+        flex-direction: column;
+        justify-content:center;
+        top: 50%;
+        right: 3%;
+        left: auto;
+        width: auto;
+        margin-bottom: auto;
+        box-shadow: 0;
+        transform: translateY(-50%);
+    }
 }

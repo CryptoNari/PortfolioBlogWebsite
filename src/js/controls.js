@@ -24,6 +24,4 @@ const pageControls = () => {
 
 }
 
-
-
 export {pageControls};
