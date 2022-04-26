@@ -2,6 +2,91 @@
 
 /* Components: contains anything reusable such as buttons, navbars, cards etc. */
 
+p{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+
+//porfolio project card
+.project-item{
+    position: relative;
+    margin: 0 2rem;
+
+  img{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;   
+  }
+
+    .hover-items{
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-orange);
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        transform: scale(0);
+        transition: var(--std-trans);
+
+        h3{
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        p{
+          color: var(--color-primary);
+          margin: 0 .5rem;
+        }
+
+        .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon{
+                background-color: var(--color-primary);
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 1rem;
+                cursor: pointer;
+                transition: var(--stand-trans);
+
+                i{
+                    font-size: 1.5rem;
+                    color: var(--color-white);
+                    margin: 0 1rem;
+                }
+
+                &:hover{
+                    background-color: var(--color-white);
+
+                    i{
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project-item:hover .hover-items{
+  opacity: 1;
+  transform: scale(1);
+}
+
 // Page control/toggle buttons
 .control-btn{
   display: flex;

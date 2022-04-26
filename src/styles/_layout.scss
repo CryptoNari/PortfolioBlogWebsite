@@ -2,11 +2,13 @@
 
 /* Layout: contains all the CSS that handles the layout, such as the container and any grid systems. */
 
+
 // sections 
 section{
     display: none;
     min-height: 90vh;
     width: 100%;
+    padding: 0 1rem;
     position: absolute;
     left: 0;
     top: 0;
@@ -27,7 +29,21 @@ section{
   }
   
 
- // control buttons container 
+ // porfolio-Projects Grid
+.portfolios{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    /* @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    
+    }  */
+}
+
+
+// control buttons container 
 .page-controls{
     position: fixed;
     display: flex;
