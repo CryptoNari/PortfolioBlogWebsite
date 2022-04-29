@@ -81,3 +81,11 @@ body {
   transition: var(--stand-trans);
   font-size: 1.1rem;
 }
+
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
