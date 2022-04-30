@@ -146,6 +146,7 @@ p{
 
 
 // contact section
+
 .contact-content-con{
   display: flex;
   flex-direction: column;
@@ -173,6 +174,25 @@ p{
         p{
           margin: .3rem 0 ;
           padding: 0 ;
+          text-align: end;
+        }
+        .flags{
+          display: flex;
+          justify-content: space-evenly;
+          gap: 8px;
+          .split-flag{
+            display: flex;
+            align-items: center;
+            .flag-icon-us{
+              position: absolute;
+              clip-path: polygon(100% 0, 0 0, 0 100%);
+            }
+          
+            .flag-icon-gb{
+              position: absolute;
+              clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            }
+          }
         }
         .icon{
           display: grid;
@@ -220,11 +240,27 @@ p{
     }
   }
 
+  
+
+  .split-flag{
+    position: relative;
+    height: 33.59px;
+    width: 23.45px;
+    .flag-icon-us{
+      position: absolute;
+      clip-path: polygon(100% 0, 0 0, 0 100%);
+    }
+  
+    .flag-icon-gb{
+      position: absolute;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+  }
+
 
   .right-contact{
     flex: 3;
-    margin-left: 0;
-    margin-top: 2.5rem;
+    margin: 2.5rem 0;
    
     .input-control{
       margin: 1.5rem 0;
