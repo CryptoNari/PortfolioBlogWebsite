@@ -32,7 +32,7 @@
 .light-mode{
   --color-primary: #ffffff;
   --color-secondary: #000;
-  --color-accent: #65b861;
+  --color-accent: #297425;
   
 
   --color-ptos1: #f8f8f8;
@@ -71,12 +71,37 @@
               -4px -8px 8px var(--color-light);
 }
 
+@mixin shadow-effect($set: out, $size: 4px, $radius: 15px) {
+  $size2: $size*2;
+
+  @if $set == in {
+    box-shadow:  inset $size $size2 $size2 var(--color-shadow),
+                inset (-$size) (-$size2) $size2 var(--color-light);
+  } @else {
+    box-shadow:  $size $size2 $size2 var(--color-shadow),
+                (-$size) (-$size2) $size2 var(--color-light);
+  }
+
+  border-radius: 15px;
+  background: var(--color-primary);
+ 
+
+}
+
 // component & utility classes
 body {
   background-color: var(--color-primary);
-  color: var(--color-secondary);
+  color: var(--color-ptos5);
   transition: var(--stand-trans);
   font-size: 1.1rem;
+}
+
+h1{
+  font-size: 1.8rem;
+}
+
+h2{
+  font-size: 1.5rem;
 }
 
 

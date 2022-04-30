@@ -125,14 +125,14 @@ p{
     margin-top: -7px;
     padding: 1.1rem;
     border-top: 8px solid var(--color-secondary);
-    h4{
+    h1{
       font-size: 1.5rem;
       margin-bottom: .7rem;
       text-align: center;
       transition: var(--std-trans);
       cursor: pointer;
       &:hover{
-        // color: var(--color-primary);
+         color: var(--color-primary);
       }
 
     }
@@ -153,9 +153,8 @@ p{
   
   .left-contact{
     flex: 2;
-    h4{
+    h2{
       margin-top: 1rem;
-      font-size: 2rem;
       text-transform: uppercase;
       text-align: center;
       }
@@ -164,6 +163,9 @@ p{
       line-height: 1.5rem;
     }
     .contact-info{
+      padding: 1rem;
+      @include shadow-effect(in, 2px);
+      background-color: var(--color-ptos1);
       .contact-item{
         display: flex;
         align-items: center;
@@ -185,14 +187,15 @@ p{
       }
     }
     .contact-icon{
+      
       display: flex;
       justify-content: center;
       margin-top: 2rem;
       a{
+        @include shadow-effect(3px);
         display: flex;
         align-items: center;
         color: var(--color-accent);
-        background-color: var(--color-ptos2);
         cursor: pointer;
         text-decoration: none;
         justify-content: center;
@@ -226,8 +229,7 @@ p{
     .input-control{
       margin: 1.5rem 0;
       input, textarea{
-        box-shadow: inset 2px 4px 4px var(--color-shadow),
-                    inset -2px -4px 4px var(--color-light);
+        @include shadow-effect(in, 2px);
         border-radius: 30px;
         font-weight: inherit;
         font-size: inherit;
@@ -251,7 +253,7 @@ p{
     }
     .submit-btn{
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
     }
   }
 }
@@ -284,9 +286,9 @@ p{
   box-shadow: inset 4px 8px 8px var(--color-shadow),
               inset -4px -8px 8px var(--color-light);
   transition: var(--stand-trans);
-
+  background-color: var(--color-accent);
   i{
-    color: var(--color-accent);
+    color: var(--color-secondary);
   }
 }
 
@@ -322,7 +324,7 @@ p{
   text-align: center;
   margin: 3rem 4rem;
   
-  h2{
+  h1{
     position: relative;
     text-transform: uppercase;
     font-size: 1.8rem;
@@ -348,13 +350,14 @@ p{
 
 
 // main button
+
 .main-btn{
+  @include shadow-effect(out, 2px);
   border-radius: 30px;
   color: var(--color-white);
   font-weight: 600;
   text-decoration: none;
   position: relative;
-  border: 1px solid var(--color-accent);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -369,22 +372,5 @@ p{
     justify-content: center;
     border-radius: 50%;
     padding: 1rem;
-  }
-  &::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    transition: var(--stand-trans);
-    z-index: -1;
-  }
-  &:hover{
-    &::before{
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-secondary);
-      transform: translateX(0%);
-    }
   }
 }

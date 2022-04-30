@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Blog Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css" />
 </head>
 <body>
     <header>
@@ -15,12 +16,12 @@
         <section class="section-1 home active-section"></section>
         <section class="section-2 about">
             <div class="section-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+                <h1>About <span>me</span><span class="bg-text">my stats</span></h1>
             </div>
         </section>
         <section class="section-3 portfolio">
             <div class="section-title">
-                <h2>port<span>folio</span><span class="bg-text">my projects</span></h2>
+                <h1>port<span>folio</span><span class="bg-text">my projects</span></h1>
             </div>
             <p> 
                 This is the  text for the introduction of the portfolioo section.
@@ -59,15 +60,15 @@
         </section>
         <section class="section-4 blog">
             <div class="section-title">
-                <h2>Blog <span>Posts</span><span class="bg-text">my Articles</span></h2>
+                <h1>Blog <span>Posts</span><span class="bg-text">my Articles</span></h1>
             </div>
             <div class="blogs-grid">
                 <div class="blog-card">
                     <img id="blog-img-1" alt="Blog Image 1">
                     <div class="blog-text">
-                        <h4>
+                        <h2>
                             How to create your own webpage
-                        </h4>
+                        </h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
@@ -79,11 +80,10 @@
         <section class="section-5 contact">
             <div class="contact-container">
                 <div class="section-title">
-                    <h2>Contact <span>me</span><span class="bg-text">get in touch</span></h2>
+                    <h1>Contact <span>me</span><span class="bg-text">get in touch</span></h1>
                 </div>
                 <div class="contact-content-con">
                     <div class="left-contact">
-                        <h4>Leave a message:</h4>
                         <p>
                             You can write me an email, contact me on my social profiles or just use the form on this site.
                             I'd love to hear from you!
@@ -100,20 +100,13 @@
                             </div>
                             <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    Email
-                                </div>
-                                <p>
-                                    : vietenandreas@gmail.com
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
                                     <i class="fa-solid fa-globe"></i>
                                     Languages
                                 </div>
                                 <p>
-                                    : English, German, Swedish
+                                    : <span class="flag-icon flag-icon-de"></span>
+                                    <span class="flag-icon flag-icon-gb"></span>
+                                    <span class="flag-icon flag-icon-se"></span>
                                 </p>
                             </div>
                         </div>
@@ -128,10 +121,14 @@
                                 <a href="#" target="_blank"> 
                                     <i class="fa-brands fa-github"></i>
                                 </a>
+                                <a href="#" target="_blank"> 
+                                    <i class="fa-solid fa-at"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="right-contact">
+                        <h2>Leave a message:</h2>
                         <form action="" class="contact-form">
                             <div class="input-control i-c-2">
                                 <input type="text" required placeholder="YOUR NAME" name="" id="">
