@@ -12,18 +12,19 @@ p{
 .project-item{
     position: relative;
     margin: 0 2rem;
-
+    
   img{
       width: 100%;
       height: 300px;
       object-fit: cover;
-      border-radius: 15px;   
+      border-radius: 15px;
+      @include control-btn-style();   
   }
 
     .hover-items{
         width: 100%;
         height: 100%;
-        background-color: var(--color-orange);
+        background-color: var(--color-accent);
         position: absolute;
         left: 0;
         top: 0;
@@ -97,7 +98,7 @@ p{
   margin: 2rem;
   // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
   @include control-btn-style();
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   transition: var(--std-trans);
   &:hover{
     box-shadow: 1px 1px 20px rgba(0,0,0,.3);
@@ -178,6 +179,7 @@ p{
             display: flex;
             align-items: center;
             font-size: 1.3rem;
+            color: var(--color-accent);
           }
         }
       }
@@ -189,8 +191,8 @@ p{
       a{
         display: flex;
         align-items: center;
-        color: var(--color-white);
-        background-color: var(--color-grey5);
+        color: var(--color-accent);
+        background-color: var(--color-ptos2);
         cursor: pointer;
         text-decoration: none;
         justify-content: center;
@@ -224,6 +226,8 @@ p{
     .input-control{
       margin: 1.5rem 0;
       input, textarea{
+        box-shadow: inset 2px 4px 4px var(--color-shadow),
+                    inset -2px -4px 4px var(--color-light);
         border-radius: 30px;
         font-weight: inherit;
         font-size: inherit;
@@ -231,7 +235,7 @@ p{
         padding: .8rem 1.1rem;
         outline: none;
         border: none;
-        background-color: var(--color-grey5);
+        background-color: var(--color-ptos2);
         width: 100%;
         color: var(--color-white);
         resize: none;
@@ -267,7 +271,7 @@ p{
 
   i{
     font-size: 1.2rem;
-    color: var(--color-orange);
+    color: var(--color-accent);
     pointer-events: none;
   }
 
@@ -282,7 +286,7 @@ p{
   transition: var(--stand-trans);
 
   i{
-    color: var(--color-orange);
+    color: var(--color-accent);
   }
 }
 
@@ -321,21 +325,21 @@ p{
   h2{
     position: relative;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
    
     span{
-      color: var(--color-orange);
+      color: var(--color-accent);
     }
     .bg-text{
       position: absolute;
-      top: 50%;
+      top:45%;
       left: 50%;
-      color: var(--color-grey5);
+      color: var(--color-ptos3);
       font-size: 2.5rem;
       font-weight: 800;
-      line-height: 3.8rem;
-      opacity: 75%;
+      line-height: 4rem;
+      opacity: 60%;
       transition: var(--std-trans);
       transform: translate(-50%, -50%);
     }
@@ -350,7 +354,7 @@ p{
   font-weight: 600;
   text-decoration: none;
   position: relative;
-  border: 1px solid var(--color-orange);
+  border: 1px solid var(--color-accent);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -359,7 +363,7 @@ p{
     padding: 0 2rem;
   }
   .btn-icon{
-    background-color: var(--color-orange);
+    background-color: var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;

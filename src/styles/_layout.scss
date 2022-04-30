@@ -49,6 +49,7 @@ section{
 
 // control buttons container 
 .page-controls{
+  background-color: var(--color-primary);
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -57,7 +58,7 @@ section{
     z-index: 10;
     padding: .5rem;
     top: auto;   
-    bottom: 0.5%;
+    bottom: 0;
     left: 50%;
     height: 10vh;
     width: 100%;
