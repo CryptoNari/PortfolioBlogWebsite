@@ -64,13 +64,6 @@
   @media (min-width: 600px) { @content; }
 }
 
-@mixin control-btn-style {
-  border-radius: 15px;
-  background: var(--color-primary);
-  box-shadow:  4px 8px 8px var(--color-shadow),
-              -4px -8px 8px var(--color-light);
-}
-
 @mixin shadow-effect($set: out, $size: 4px, $radius: 15px) {
   $size2: $size*2;
 

@@ -18,7 +18,7 @@ p{
       height: 300px;
       object-fit: cover;
       border-radius: 15px;
-      @include control-btn-style();   
+      @include shadow-effect();   
   }
 
     .hover-items{
@@ -97,7 +97,7 @@ p{
   border-radius: 15px;
   margin: 2rem;
   // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
-  @include control-btn-style();
+  @include shadow-effect(out, 2px);
   background-color: var(--color-accent);
   transition: var(--std-trans);
   &:hover{
@@ -109,7 +109,7 @@ p{
       object-fit: cover;
       border-radius: 15px;   
       transform: scale(1.07);
-      box-shadow: 0px 4px 20px rgba(0,0,0,.8);
+      @include shadow-effect(out, 2px);
     }
   }
   img{
@@ -304,7 +304,7 @@ p{
   padding: 1rem;
   width: 50px;
   height: 50px;
-  @include control-btn-style();
+  @include shadow-effect();
   cursor: pointer;
 
   i{
@@ -319,12 +319,11 @@ p{
 }
 
 .active-control{
-  box-shadow: inset 4px 8px 8px var(--color-shadow),
-              inset -4px -8px 8px var(--color-light);
+  @include shadow-effect(in, 2px);
   transition: var(--stand-trans);
   background-color: var(--color-accent);
   i{
-    color: var(--color-secondary);
+    color: var(--color-primary);
   }
 }
 
@@ -339,7 +338,7 @@ p{
   right: 3%;
   width: 45px;
   height: 45px;
-  @include control-btn-style();
+  @include shadow-effect();
   cursor: pointer;
   transition: var(--stand-trans);
   
