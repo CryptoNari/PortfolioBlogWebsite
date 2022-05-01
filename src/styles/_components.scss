@@ -370,13 +370,13 @@ p{
     }
     .bg-text{
       position: absolute;
-      top:45%;
+      top: 50%;
       left: 50%;
       color: var(--color-ptos3);
       font-size: 2.5rem;
       font-weight: 800;
       line-height: 4rem;
-      opacity: 60%;
+      opacity: 55%;
       transition: var(--std-trans);
       transform: translate(-50%, -50%);
     }
