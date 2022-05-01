@@ -28,6 +28,14 @@ section{
     }
   }
   
+// home section
+.home-content{
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
 
  // porfolio-Projects Grid
 .portfolios{
