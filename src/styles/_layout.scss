@@ -36,6 +36,29 @@ section{
   padding-bottom: 6rem;
 }
 
+// about section
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1.5rem 0 5rem;
+  .right-about{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 2.5rem;
+
+  }
+  .left-about{
+    padding: 0 1rem;
+  }
+}
+
+.timeline{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 0 2rem;
+  padding-bottom: 6rem;
+}
 
  // porfolio-Projects Grid
 .portfolios{
@@ -54,6 +77,12 @@ section{
   margin-top: 5rem;
 }
 
+
+// cv-button
+.cv-btn{
+  display: flex;
+  justify-content: center;
+}
 
 // control buttons container 
 .page-controls{
