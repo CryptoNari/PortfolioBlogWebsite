@@ -52,6 +52,13 @@ p{
 }
 
 
+// about-highlights
+.left-about{
+  span{
+    color: var(--color-accent)
+  }
+}
+
 // about-items
 .about-item{
   @include shadow-effect(out, 3px);
