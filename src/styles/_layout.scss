@@ -8,15 +8,11 @@ section{
     display: none;
     min-height: 90vh;
     width: 100%;
-    padding: 0 1rem;
     position: absolute;
     left: 0;
     top: 0;
-    background-color: var(--color-primary);
-    @include for-tablet-portait() {
-      padding: 0 7rem ;
-    }
 }
+
 .active-section{
     display: block;
     animation: scaleAnim 1s ease-in-out;
@@ -36,9 +32,19 @@ section{
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+  @include for-tablet-landscape() {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  @include for-desktop() {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
 }
 
 // about section
+
+
 .about-container{
   display: grid;
   grid-template-columns: 1fr;
@@ -51,9 +57,17 @@ section{
   .left-about{
     padding: 0 1rem;
   }
-  @include for-tablet-portait() {
+ 
+  @include for-tablet-landscape() {
+    grid-template-columns: repeat(2, 1fr);
     .right-about{
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: 1fr;
+    }
+  }
+  @include for-desktop() {
+    grid-template-columns: repeat(2, 1fr);
+    .right-about{
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -64,6 +78,34 @@ section{
   grid-gap: 2rem;
   padding: 0 2rem;
   padding-bottom: 6rem;
+  @include for-tablet-landscape() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include for-desktop() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// All sections
+@include for-tablet-portait() {
+  .about, .portfolio, .blog, .contact{
+    padding: 0 7rem;
+  }
+  .home{
+    padding-right: 7rem;
+  }
+}
+
+@include for-tablet-landscape() {
+  .about, .portfolio, .blog, .contact{
+    padding: 0 7rem;
+  }
+}
+
+@include for-desktop() {
+  .about, .portfolio, .blog, .contact{
+    padding: 0 12rem;
+  }
 }
 
  // porfolio-Projects Grid
@@ -72,22 +114,17 @@ section{
   grid-template-columns: 1fr;
   justify-items: center;
   margin: .5rem 1.5rem 6rem;
- /*  @include for-tablet-portait() {
-    margin: .5rem 7rem 6rem;
-  } */
-}
-
-
-/* // Blogs-Grid
-.blogs-grid{
-  display: grid;
-  grid-template-columns: 1fr ;
-  justify-items: center;
-  margin: 3rem 1.5rem 6rem;
-  @include for-tablet-portait() {
-    margin: .5rem 5rem 6rem;
+  @include for-tablet-landscape() {
+    margin: 5rem 1.5rem 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
   }
-} */
+  @include for-desktop() {
+    margin: 5rem 1.5rem 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
 
 
 // cv-button

@@ -10,20 +10,61 @@ p{
 // home section parts
 .left-home{
   display: flex;
-  align-items: center;
+  align-items: start;
   position: relative;
-  margin-top: 1rem;
   .h-shape{
-    display: none;
+    transition: var(--stand-trans);
+    width: 65%;
+    height: 100vh;
+    background-color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
   }
 
   .image{
     
     img{
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: auto;
+      margin-top: 2rem;
+      margin-left: 2rem;
       border-radius: 20px;
       object-fit: cover;
+    }
+  }
+}
+@include for-tablet-landscape() {
+  .home{
+    position: relative;
+    padding: 0;
+    padding-right: 7rem;
+    .h-shape{
+      position: absolute;
+      min-height: 100vh;
+      display: block;
+    }
+    .image{
+      margin-left: 3rem;
+      height: 60vh;
+    }
+  }
+}
+@include for-desktop() {
+  .home{
+    position: relative;
+    padding: 0;
+    padding-right: 7rem;
+    .h-shape{
+      position: absolute;
+      min-height: 100vh;
+      display: block;
+    }
+    .image{
+      margin-left: 3rem;
+      height: 60vh;
     }
   }
 }
@@ -32,7 +73,7 @@ p{
   background-color: var(--color-primary);
   padding: 2rem 1rem 0;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 1rem;
   transform: translateY(-130px);
   border-radius: 20px;
   @include shadow-effect(in, 3px);
@@ -50,7 +91,34 @@ p{
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  
+  @include for-tablet-landscape() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(0);
+    @include shadow-effect(in, 0);
+    .message{
+      font-size: 2.7rem;
+      line-height: 3rem;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
+  @include for-desktop() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(0);
+    @include shadow-effect(in, 0);
+    .message{
+      font-size: 2.7rem;
+      line-height: 3rem;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
 }
 
 
@@ -162,7 +230,7 @@ p{
   position: relative;
   width: 100%;
   height: 350px;
-  margin: 2rem 0 2rem;
+  margin: 2rem 0;
     
   .card-image img{
     width: 100%;
@@ -176,6 +244,7 @@ p{
       position: absolute;
       bottom: 0;
       background:var(--color-ocu-back);
+      border-radius: 0 0 15px 15px;
       h2{
           font-size: 1.8rem;
           color: var(--color-accent);
@@ -219,6 +288,12 @@ p{
       background-color: var(--color-accent);
     }
   }
+  @include for-tablet-landscape() {
+    margin: 0;
+  }
+  @include for-desktop() {
+    margin: 0;
+  }
 }
 
 
@@ -228,15 +303,16 @@ p{
 .contact-content-con{
   display: flex;
   flex-direction: column;
-  padding: 0 .5rem 11vh .5rem;
+  padding: 0 1rem 11vh;
   
   .left-contact{
     flex: 2;
-    h2{
+    /// Where is h2
+    /* h2{
       margin-top: 1rem;
       text-transform: uppercase;
       text-align: center;
-      }
+      } */
     p{
       margin: 1rem 0;
       line-height: 1.5rem;
@@ -370,6 +446,17 @@ p{
       justify-content: flex-end;
     }
   }
+  @include for-desktop() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    .left-contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin-top: 7rem;
+    }
+  }
 }
 
 
@@ -462,6 +549,21 @@ p{
   @include for-tablet-portait() {
     h1{
       font-size: 2.2rem;
+    }
+  }
+  @include for-tablet-landscape() {
+    h1{
+      font-size: 2.2rem;
+    }
+  }
+  @include for-desktop() {
+    margin: 4rem 4rem;
+    h1{
+      font-size: 3rem;
+      .bg-text{
+        font-size: 3.5rem;
+        line-height: 5.8rem;
+      }
     }
   }
 }
