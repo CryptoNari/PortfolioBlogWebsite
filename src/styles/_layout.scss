@@ -61,10 +61,10 @@ section{
 
  // porfolio-Projects Grid
 .project-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    
-    margin: 3rem 0 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: .5rem 1.5rem 6rem;
 }
 
 
@@ -72,7 +72,8 @@ section{
 .blogs-grid{
   display: grid;
   grid-template-columns: 1fr ;
-  margin-top: 5rem;
+  justify-items: center;
+  margin: 3rem 1.5rem 6rem;
 }
 
 

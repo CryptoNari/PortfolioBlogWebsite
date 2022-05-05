@@ -160,12 +160,11 @@ p{
 
 .card{
   position: relative;
-  width: auto;
+  width: 100%;
   height: 350px;
-  margin: 2rem 2rem;
+  margin: 2rem 0 2rem;
     
   .card-image img{
-    position: absolute;
     width: 100%;
     height: 350px;
     object-fit: cover;
