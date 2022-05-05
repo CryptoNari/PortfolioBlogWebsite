@@ -13,6 +13,9 @@ section{
     left: 0;
     top: 0;
     background-color: var(--color-primary);
+    @include for-tablet-portait() {
+      padding: 0 7rem ;
+    }
 }
 .active-section{
     display: block;
@@ -44,10 +47,14 @@ section{
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 2.5rem;
-
   }
   .left-about{
     padding: 0 1rem;
+  }
+  @include for-tablet-portait() {
+    .right-about{
+      grid-template-columns: repeat(2,1fr);
+    }
   }
 }
 
@@ -60,21 +67,27 @@ section{
 }
 
  // porfolio-Projects Grid
-.project-container{
+.project-container, .blogs-grid{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   margin: .5rem 1.5rem 6rem;
+ /*  @include for-tablet-portait() {
+    margin: .5rem 7rem 6rem;
+  } */
 }
 
 
-// Blogs-Grid
+/* // Blogs-Grid
 .blogs-grid{
   display: grid;
   grid-template-columns: 1fr ;
   justify-items: center;
   margin: 3rem 1.5rem 6rem;
-}
+  @include for-tablet-portait() {
+    margin: .5rem 5rem 6rem;
+  }
+} */
 
 
 // cv-button

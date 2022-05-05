@@ -459,6 +459,11 @@ p{
       transform: translate(-50%, -50%);
     }
   }
+  @include for-tablet-portait() {
+    h1{
+      font-size: 2.2rem;
+    }
+  }
 }
 
 
