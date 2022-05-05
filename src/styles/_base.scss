@@ -26,6 +26,8 @@
   --color-light: #7b7b7b;
   --color-shadow: #1f1f1f;
 
+  --color-ocu-back:  rgba(0, 0, 0, 0.5);
+
   --std-trans: all .4s ease-in-out;
 }
 
@@ -44,6 +46,8 @@
 
   --color-light: #dbe1e8;
   --color-shadow: #666666;
+
+  --color-ocu-back:  rgba(254, 254, 254, 0.5);
 }
 
 // mixin
