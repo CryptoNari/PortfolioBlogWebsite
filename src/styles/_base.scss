@@ -36,7 +36,6 @@
   --color-secondary: #000;
   --color-accent: #297425;
   
-
   --color-ptos1: #f8f8f8;
   --color-ptos2: #dbe1e8;
   --color-ptos3: #b2becd;
@@ -81,8 +80,6 @@
 
   border-radius: 15px;
   background: var(--color-primary);
- 
-
 }
 
 // component & utility classes
@@ -90,23 +87,27 @@ body {
   background-color: var(--color-primary);
   color: var(--color-ptos5);
   transition: var(--stand-trans);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: 'Telex', sans-serif;
 }
 
 h1{
+  color: var(--color-secondary);
   font-size: 1.5rem;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 h2{
+  color: var(--color-secondary);
   font-size: 1.5rem;
   font-family: 'Libre Franklin', sans-serif;
-  padding-bottom: 2rem;
+  padding: 2.5rem 0;
 }
 
 p{
+  line-height: 1.5rem;
   padding: 0 1rem;
+  padding-bottom: 2rem;
 }
 
 a{

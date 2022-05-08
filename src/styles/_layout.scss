@@ -12,20 +12,6 @@ section{
     left: 0;
     top: 0;
 }
-
-.active-section{
-    display: block;
-    animation: scaleAnim 1s ease-in-out;
-    @keyframes scaleAnim {
-      0%{
-        transform: translateY(-100%) scaleY(0);
-      }
-
-      100%{
-        transform: translateY(0) scaleY(1);
-      }
-    }
-  }
   
 // home section
 .home-content{
@@ -48,14 +34,11 @@ section{
 .about-container{
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1.5rem 0 5rem;
+  padding: 0 1rem 5rem;
   .right-about{
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 2.5rem;
-  }
-  .left-about{
-    padding: 0 1rem;
+    padding: 2.5rem 0;
   }
  
   @include for-tablet-landscape() {
@@ -72,19 +55,23 @@ section{
   }
 }
 
-.timeline{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
-  padding: 0 2rem;
-  padding-bottom: 6rem;
-  @include for-tablet-landscape() {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include for-desktop() {
-    grid-template-columns: repeat(2, 1fr);
+.bottom-about{
+  padding: 0 1rem 5rem;
+
+  .timeline{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 0 1rem;
+    @include for-tablet-landscape() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-desktop() {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
+
 
 // All sections
 @include for-tablet-portait() {
