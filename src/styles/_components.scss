@@ -75,26 +75,18 @@
   @include shadow-effect(in, 3px);
   .message{
     padding-bottom: 2rem;
-    line-height: 2.3rem;
     .name, .prof{
       color: var(--color-accent);
       text-transform: uppercase;
     }
   }
-  
+
   @include for-tablet-landscape() {
     display: flex;
     flex-direction: column;
     justify-content: center;
     transform: translateY(0);
     @include shadow-effect(in, 0);
-    .message{
-      font-size: 2.7rem;
-      line-height: 3rem;
-    }
-    p{
-      font-size: 1.3rem;
-    }
   }
   @include for-desktop() {
     display: flex;
@@ -102,13 +94,6 @@
     justify-content: center;
     transform: translateY(0);
     @include shadow-effect(in, 0);
-    .message{
-      font-size: 2.7rem;
-      line-height: 3rem;
-    }
-    p{
-      font-size: 1.3rem;
-    }
   }
 }
 
@@ -190,11 +175,7 @@
     font-weight: 500;
     transform: translateY(5px) translateX(-6px);
   }
-  h5{
-    padding: 1rem 0;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 600;
+  h3{
     span{
       color: var(--color-ptos4);
       font-weight: 400;
@@ -235,11 +216,8 @@
       border-radius: 0 0 15px 15px;
       padding: 0 1rem;
       h2{
-          font-size: 1.8rem;
           color: var(--color-accent);
-          padding-top: .5rem;
-          
-          padding-bottom: .5rem;
+          padding: .5rem 0;
           text-align: start;
       }  
   }
@@ -495,9 +473,7 @@
     color: var(--color-secondary);
     position: relative;
     text-transform: uppercase;
-    font-size: 1.8rem;
     font-weight: 700;
-   
     span{
       color: var(--color-accent);
     }
@@ -512,22 +488,19 @@
       opacity: 55%;
       transition: var(--std-trans);
       transform: translate(-50%, -50%);
-    }
-  }
-  @include for-tablet-portait() {
-    h1{
-      font-size: 2.2rem;
-    }
-  }
-  @include for-tablet-landscape() {
-    h1{
-      font-size: 2.2rem;
+      @include for-tablet-portait() {
+        font-size: 3rem;
+        line-height: 4.8rem;
+      }
+      @include for-tablet-landscape() {
+        font-size: 3rem;
+        line-height: 4.8rem;
+      }
     }
   }
   @include for-desktop() {
     margin: 4rem 4rem;
     h1{
-      font-size: 3rem;
       .bg-text{
         font-size: 3.5rem;
         line-height: 5.8rem;
