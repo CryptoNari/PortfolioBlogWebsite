@@ -50,10 +50,6 @@
 }
 
 // mixin
-@mixin for-phone {
-  @media (max-width: 599px) { @content; }
-}
-
 @mixin for-tablet-portait {
   @media (min-width: 600px) and (max-width: 899px) { @content; }
 }
@@ -152,10 +148,12 @@ p{
     font-size: 1.1rem;
   }
   @include for-tablet-landscape() {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
   }
   @include for-desktop(){
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
   }
 }
 

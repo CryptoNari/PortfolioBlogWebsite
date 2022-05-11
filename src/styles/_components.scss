@@ -6,23 +6,20 @@
 // home section parts
 .left-home{
   display: flex;
-  align-items: start;
+  align-items: center;
   position: relative;
-
   .h-shape{
-    transition: var(--stand-trans);
+    position: absolute;
     width: 65%;
     height: 100vh;
-    background-color: var(--color-accent);
-    position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
+    background-color: var(--color-accent);
     clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+    transition: var(--stand-trans);
   }
-
-  .image{
-    
+  .image{  
     img{
       width: 80%;
       height: auto;
@@ -33,7 +30,6 @@
     }
   }
 }
-
 @include for-tablet-landscape() {
   .home{
     position: relative;
@@ -45,8 +41,10 @@
       display: block;
     }
     .image{
-      margin-left: 3rem;
-      height: 60vh;
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+      max-height: 70vh;
     }
   }
 }
@@ -61,8 +59,10 @@
       display: block;
     }
     .image{
+      display: flex;
+      align-items: center;
       margin-left: 3rem;
-      height: 60vh;
+      max-height: 70vh;
     }
   }
 }
@@ -138,6 +138,9 @@
         width: 2rem;
         height: 2px;
         background-color: var(--color-accent);
+      }
+      @include for-desktop() {
+        font-size: 1.5rem;
       }
     }
   }
