@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll('section');
 const ctrlBtns = document.querySelectorAll('.control-btn');
-const contactForm = document.querySelector('.contact-form');
+
 
 let name = document.getElementById('name');
 let email = document.getElementById('email');
@@ -30,7 +30,10 @@ const pageControls = () => {
     })
 
     // ContactForm submit btn
-    contactForm.addEventListener('submit', (e) => {
+    const contactForm = document.querySelector('.submit-btn > .main-btn');
+
+    
+    contactForm.addEventListener('click', (e) => {
         e.preventDefault();
     
         let formData = {
