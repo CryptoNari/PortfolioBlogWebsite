@@ -30,11 +30,12 @@ const pageControls = () => {
     })
 
     // ContactForm submit btn
-    const contactForm = document.querySelector('.submit-btn > .main-btn');
+    const contactBtn = document.querySelector('.submit-btn > .main-btn');
 
     
-    contactForm.addEventListener('click', (e) => {
+    contactBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        contactBtn.classList.toggle('loading');
     
         let formData = {
             name: name.value,
@@ -49,12 +50,14 @@ const pageControls = () => {
         xhr.onload = function () {
             console.log(xhr.responseText);
             if(xhr.responseText == 'success') {
+                contactBtn.classList.toggle('loading');
                 alert('Email sent');
                 name.value = '';
                 email.value = '';
                 subject.value = '';
                 message.value = '';
             } else {
+                contactBtn.classList.toggle('loading');
                 alert('Email could not be sent!')
             }
         }
