@@ -223,7 +223,18 @@
           color: var(--color-accent);
           padding: .5rem 0;
           text-align: start;
-      }  
+      }
+        
+  }
+
+  .card-text > h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top : 1.6em;
+    height: 3px;
+    width: 80%;
+    background: var(--color-secondary);
   }
 
   .card-icons{
